@@ -1,4 +1,5 @@
 require('@babel/register');
+require('dotenv').config();
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
@@ -7,9 +8,8 @@ const path = require('path');
 const expressSession = require('express-session');
 const FileStore = require('session-file-store')(expressSession);
 
-// const userRouter = require('./router/user-router');
-// const indexRouter = require('./router/index-router');
-// const gameRouter = require('./router/game-router');
+const apiRouter = require('./router/apiRouter');
+const viewRouter = require('./router/viewRouter');
 
 const sessionConfig = {
     name: 'Pechenki',
@@ -32,9 +32,9 @@ app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// app.use('/game', gameRouter);
-// app.use('/user', userRouter);
-// app.use('/', indexRouter);
+
+app.use('/api', apiRouter);
+app.use('/', viewRouter);
 
 app.get('/*', (req, res) => {
    res.status(400).send("Error")

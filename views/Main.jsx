@@ -4,7 +4,7 @@ const React = require('react');
 
   const Main = ({user,}) => (
     <Layout user= {user}>
-     <div className='auction'> Главная страницв</div>
+     <div className='auction'> Главная страница</div>
      <div className="cardsAuction">
       </div>
     </Layout>
