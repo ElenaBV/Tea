@@ -28,13 +28,7 @@ userRouter.post('/registration', async (req, res) => {
 });
 userRouter.post('/login', async (req, res) => {
     const { email, password } = req.body;
-    if (!email) {
-        return res.status(400).json({ message: 'Введите email' });
-      }
-    if (!password) {
-        return res.status(400).json({ message: 'Введите пароль' });
-    }
-      
+  
     try {
       const user = await User.findOne({ where: { email } });
       if (!user) {
