@@ -40,14 +40,6 @@ admin?.addEventListener("click", async (event) => {
 </div> 
 `
 
-// const addBtn = document.createElement("button");
-// addBtn.className =
-//  'addButton' ;
-//  addBtn.type = 'submit';
-//  addBtn.innerText = `
-//  Добавить!`;
-
-//  div.appendChild(addBtn);
  event.target.parentElement.appendChild(div);
  const form = document.querySelector('.add-form');
 
