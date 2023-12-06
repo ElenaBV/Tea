@@ -1,7 +1,8 @@
-const React = require('react');
+const React = require("react");
 
-function NavBar({user}) {
+function NavBar({ user }) {
   return (
+
 <nav className="navbar navbar-expand-lg bg-body-tertiary">
   <div className="container-fluid">
     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -18,11 +19,8 @@ function NavBar({user}) {
           <a className="nav-link" href="/registration">Регистрация</a>
             </>
           )}
-         
       </div>
-    </div>
-  </div>
-</nav>
+    </nav>
   );
 }
 

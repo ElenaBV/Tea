@@ -1,8 +1,13 @@
-const apiRouter = require("express").Router()
-const lkuserRouter = require("./lkuserRouter");
-const userRouter = require("./userRouter")
 
-apiRouter.use("/user",userRouter);
+const apiRouter = require("express").Router();
+const userRouter = require("./userRouter");
+const teaRouter = require("./teaRouter");
+const lkuserRouter = require("./lkuserRouter");
+
+apiRouter.use("/user", userRouter);
+apiRouter.use('/tea', teaRouter);
 apiRouter.use('/lk', lkuserRouter);
 
-module.exports = apiRouter
+
+
+module.exports = apiRouter;
