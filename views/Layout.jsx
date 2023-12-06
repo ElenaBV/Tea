@@ -7,7 +7,7 @@ const Layout = ({ children,user }) => {
       <head>
         <link rel="stylesheet" href="/style/style.css" />
         <meta charSet="UTF-8" />
-        <script defer src="/js/indexScript.js"/>
+        {/* <script defer src="/commentLk.js"/> */}
         <title>Экзамен</title>
       </head>
       <body >

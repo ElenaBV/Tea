@@ -6,7 +6,7 @@ const Registration = require("../views/Registration")
 
 viewRouter.get("/",(req,res)=>{
     const {user} = req.session
-    renderTemplate(Main,{user},res)
+    renderTemplate(Main, {user}, res)
 })
 
 viewRouter.get("/login",(req,res)=>{
@@ -17,6 +17,7 @@ viewRouter.get("/login",(req,res)=>{
 viewRouter.get("/registration",(req,res)=>{
     renderTemplate(Registration,{},res)
 })
+
 
 module.exports = viewRouter
 
