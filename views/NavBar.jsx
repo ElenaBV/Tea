@@ -9,7 +9,7 @@ function NavBar({user}) {
       
           {user?(
           <>
-          <a className='nav_user' href="/api/user">{user.name}</a>
+          <a className='nav_user' href="/api/lk">{user.name}</a>
           <a className="logout" href="/">Main page</a>
           <a className="logout" href="/api/user/logout">Log Out</a>
           </>):(
