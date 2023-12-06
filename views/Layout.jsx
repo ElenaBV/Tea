@@ -6,8 +6,9 @@ const Layout = ({ children, user }) => {
     <html lang="en">
       <head>
         <link rel="stylesheet" href="/style/style.css" />
+        <script defer src="/teaLkAdmin.js"/>
         <meta charSet="UTF-8" />
-        <title>Экзамен</title>
+        <title>Чаепитие</title>
       </head>
       <body>
         <NavBar user={user} />

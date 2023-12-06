@@ -11,7 +11,7 @@ const Layout = require("./Layout");
             <div key={el.id} className='oneTea'>
                 <p>{el.teaName}</p>
                 <p>{el.place}</p>
-                <p>{el.picture}</p>
+                <img src={el.picture}/>
                 <p>{el.description}</p>
                 <button data-id={el.id} className='deleteBtn'>Удалить</button>
             </div>

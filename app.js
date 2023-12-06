@@ -10,6 +10,7 @@ const FileStore = require("session-file-store")(expressSession);
 const apiRouter = require("./router/apiRouter");
 const viewRouter = require("./router/viewRouter");
 
+const {Tea} = require("./db/models")
 const sessionConfig = {
   name: "Pechenki",
   store: new FileStore(),
@@ -31,8 +32,18 @@ app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.post("/", async(req,res)=>{
+  const teas = await Tea.findAll({raw:true})
+  console.log(teas,"ndjhfkjahsdkjfhadksf")
+  res.json(teas)
+})
+
+
 app.use("/api", apiRouter);
 app.use("/", viewRouter);
+
+
+
 
 app.get("/*", (req, res) => {
   res.status(400).send("Error");

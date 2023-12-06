@@ -9,11 +9,19 @@ function NavBar({ user }) {
       <div className="navbar-nav">
       
           {user?(
-          <>
+            user.name === "admin"?(
+                <>
+                <a className='nav_user' href="/api/lkadmin">{user.name}</a>
+                <a className="logout" href="/">Main page</a>
+                <a className="logout" href="/api/user/logout">Log Out</a>
+                </>
+            ):(
+            <>
           <a className='nav_user' href="/api/lk">{user.name}</a>
           <a className="logout" href="/">Main page</a>
           <a className="logout" href="/api/user/logout">Log Out</a>
-          </>):(
+          </>
+            )):(
             <>
             <a className="nav-link" href="/login">Залогиниться</a>
           <a className="nav-link" href="/registration">Регистрация</a>

@@ -1,11 +1,12 @@
 const renderTemplate = require('../lib/renderTemplate');
 const AdminView = require('../views/AdminView');
 const { Tea } = require('../db/models');
-
+const {checkAdmin} = require("../middlwares/middlwares")
 const lkadminRouter = require('express').Router();
 
 
-lkadminRouter.get('/', async (req, res) => {
+
+lkadminRouter.get('/', checkAdmin,async (req, res) => {
     try {
         const { user } = req.session;
         const tea = await Tea.findAll({raw: true})
@@ -16,17 +17,19 @@ lkadminRouter.get('/', async (req, res) => {
     }
 })
 
-lkadminRouter.post('/', async (req, res) => {
+lkadminRouter.post('/',checkAdmin,async (req, res) => {
     try {
        const { user } = req.session;
-       const id = req.session.user.id;
-       const { teaName, place, picture, description } = req.body;
+       const userId = req.session.user.id;
+       const { teaName, place,latitude,longitude, picture, description } = req.body;
       const teaAdd = await Tea.create({
         teaName,
         place,
         picture,
         description,
-        userId: id,
+        userId,
+        latitude,
+        longitude,
       })
       res.json(teaAdd);
     } catch (error) {
@@ -35,11 +38,10 @@ lkadminRouter.post('/', async (req, res) => {
     }
 })
 
-lkadminRouter.delete('/:id', async (req, res) => {
+lkadminRouter.delete('/:id', checkAdmin, async (req, res) => {
     try {
         const { user } = req.session;
         const { id } = req.params;
-        // console.log('!!!!!!!!!!!!!!', id)
         const teaDelete = await Tea.destroy({where: {id}})
         res.json(teaDelete);
     } catch (error) {

@@ -9,5 +9,14 @@ const checkUser = (req, res, next) => {
   };
 
 
+  const checkAdmin = (req, res, next) => {
 
-  module.exports = {checkUser,}
+    if (req.session.user.name === "admin") {
+      next();
+    } else {
+      res.redirect('/api/lk');
+    }
+  };
+
+
+  module.exports = {checkAdmin}
