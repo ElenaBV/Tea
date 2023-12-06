@@ -20,6 +20,8 @@ function NavBar({ user }) {
             </>
           )}
       </div>
+    </div>
+    </div>
     </nav>
   );
 }

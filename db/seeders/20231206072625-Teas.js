@@ -9,7 +9,7 @@ module.exports = {
         {
           teaName: "White tea",
           place: "California",
-          picture: "123https://charitea.ru/wp-content/uploads/2020/01/Vietnam-White-tea-old-trees-635x635.jpg",
+          picture: "https://charitea.ru/wp-content/uploads/2020/01/Vietnam-White-tea-old-trees-635x635.jpg",
           description: "Белый чай Калифорнийский",
           userId: 1,
           createdAt: new Date(),

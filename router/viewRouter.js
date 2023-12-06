@@ -22,7 +22,7 @@ viewRouter.get("/tea/:id", async (req, res) => {
     where: { teaId: req.params.id },
     include: [User],
   });
-  console.log(comment);
+  console.log("commentdjhfiahegshrg",comment);
   renderTemplate(TeaCard, { user, tea, comment }, res);
 });
 

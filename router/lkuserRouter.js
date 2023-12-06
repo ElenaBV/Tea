@@ -35,9 +35,14 @@ lkuserRouter.put('/:id', async (req, res) => {
     try {
         const { id } = req.params;
         const { commentBody } = req.body;
-        console.log('!!!!!', id, commentBody);
+        const {user} = req.session;
+        const commentId = await Comment.findOne({where: {id}}, {raw: true})
+        const ownerId =  commentId.dataValues.ownerId
+
+        if(user.id === ownerId) {
         const editCom = await Comment.update({commentBody}, {where: {id}})
         res.json(editCom)
+        }  
     } catch (error) {
         console.log(error);
         res.sendStatus(400);

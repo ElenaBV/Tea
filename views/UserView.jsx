@@ -11,8 +11,13 @@ const Layout = require("./Layout");
           <div key={elem.id} className="oneComm">
             <p>{elem['Tea.teaName']}</p>
             <p className='comm'>{elem.commentBody}</p>
+            {user.id === elem.ownerId &&
+            <>
             <button data-id={elem.id} className='editBtn'>Изменить</button>
             <button data-id={elem.id} className='deleteBtn'>Удалить</button>
+            </>
+            }
+          
           </div>
         ))}
       </div>
