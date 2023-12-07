@@ -6,7 +6,7 @@ const lkadminRouter = require('express').Router();
 
 
 
-lkadminRouter.get('/', checkAdmin,async (req, res) => {
+lkadminRouter.get('/', async (req, res) => {
     try {
         const { user } = req.session;
         const tea = await Tea.findAll({raw: true})
@@ -17,7 +17,7 @@ lkadminRouter.get('/', checkAdmin,async (req, res) => {
     }
 })
 
-lkadminRouter.post('/',checkAdmin,async (req, res) => {
+lkadminRouter.post('/', async (req, res) => {
     try {
        const { user } = req.session;
        const userId = req.session.user.id;
@@ -38,7 +38,7 @@ lkadminRouter.post('/',checkAdmin,async (req, res) => {
     }
 })
 
-lkadminRouter.delete('/:id', checkAdmin, async (req, res) => {
+lkadminRouter.delete('/:id', async (req, res) => {
     try {
         const { user } = req.session;
         const { id } = req.params;
