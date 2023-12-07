@@ -6,7 +6,7 @@ module.exports = function Login({ message }) {
     <Layout>
       <div className="wrapper__login">
         <div className="cardlogin__container">
-          <h4 className="card-header">Залогиниться</h4>
+          <h4 className="card-header">Вход</h4>
           <div className="card-body">
             <form action="/api/user/login" method="POST">
               <div className="mb-3">
@@ -15,7 +15,7 @@ module.exports = function Login({ message }) {
                     name="email"
                     className="form-control"
                     id="exampleInputEmail1"
-                    placeholder="Email"
+                    placeholder="Электронная почта"
                   />
                 </label>
               </div>
@@ -26,11 +26,11 @@ module.exports = function Login({ message }) {
                     type="password"
                     className="form-control"
                     id="exampleInputPassword1"
-                    placeholder="Password"
+                    placeholder="Пароль"
                   />
                 </label>
               </div>
-              <button type="submit" className="btnSubmitLog">
+              <button type="submit" className="btnSubmitLog btnHover">
                 Войти
               </button>
             </form>

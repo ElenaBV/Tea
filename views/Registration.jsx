@@ -6,7 +6,7 @@ module.exports = function Registration() {
     <Layout>
       <div className="wrapper__registration">
         <div className="cardreg__container">
-          <h4 className="card-header">Зарегистрироваться</h4>
+          <h4 className="card-header">Регистрация</h4>
           <div className="card-body">
             <form action="/api/user/registration" method="POST">
               <div className="regInput">
@@ -15,7 +15,7 @@ module.exports = function Registration() {
                     name="userName"
                     className="form-control"
                     id="exampleInputName"
-                    placeholder="userName"
+                    placeholder="Имя пользователя"
                   />
                 </label>
               </div>
@@ -26,7 +26,7 @@ module.exports = function Registration() {
                     type="email"
                     className="form-control"
                     id="exampleInputEmail"
-                    placeholder="Email"
+                    placeholder="Электронная почта"
                   />
                 </label>
               </div>
@@ -37,11 +37,11 @@ module.exports = function Registration() {
                     type="password"
                     className="form-control"
                     id="exampleInputPassword"
-                    placeholder="password"
+                    placeholder="Пароль"
                   />
                 </label>
               </div>
-              <button type="submit" className="btnSubmitReg">
+              <button type="submit" className="btnSubmitReg btnHover">
                 Зарегистрироваться
               </button>
             </form>

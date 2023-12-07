@@ -1,4 +1,233 @@
-.cardYandex{
-    width: 900px;
-    height: 900px;
+.cardYandex {
+  width: 100%;
+  height: 900px;
+}
+
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  color: #333;
+  background-image: linear-gradient(to right, #fcfcfc, rgb(159, 148, 253));
+}
+
+.container-fluid {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar {
+  background-image: linear-gradient(to right, #fcfcfc, rgb(159, 148, 253));
+  color: white;
+  padding: 15px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.navbar-nav a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+  font-size: 18px;
+  margin-right: 20px;
+  text-decoration: none;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.navbar-nav a:hover {
+  text-decoration: underline;
+  background-color: #f8f8f8;
+}
+
+.navbar-nav a:hover {
+  text-decoration: underline;
+}
+
+.wrapper__login,
+.wrapper__registration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f8f8f8;
+}
+
+.cardlogin__container,
+.cardreg__container {
+  text-align: center;
+  width: 400px;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  color: #333;
+}
+
+.auction {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.cardsAuction {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  width: 300px;
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.auction {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.oneComm {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.auction {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.oneComm,
+.oneTea {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-edit {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.add-btn {
+  background-color: rgb(212, 0, 255);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background-color: rgb(212, 0, 255);
+}
+
+input {
+  padding: 0.5rem;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: none;
+  border-color: rgb(212, 0, 255);
+  box-shadow: 0 0 8px rgb(212, 0, 255);
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btnHover:hover {
+  background-color: rgb(212, 0, 255);
+  color: #ffffff;
+}
+
+.card {
+  width: 600px;
+  padding: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.cardYandex {
+  padding: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.commentInput {
+  width: 600px;
+}
+
+.formAdd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.oneTea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.comment-wrapper {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.username {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.comment-text {
+  font-size: 12px;
 }
