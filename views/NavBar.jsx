@@ -9,35 +9,36 @@ function NavBar({ user }) {
             {user ? (
               user.name === "admin" ? (
                 <>
-                  <a className="nav_user" href="/api/lkadmin">
-                    {user.name}
-                  </a>
-                  <a className="logout" href="/">
+                  <a className="logout newStyle" href="/">
                     Главная страница
                   </a>
-                  <a className="logout" href="/api/user/logout">
+                  <a className="logout newStyle" href="/api/user/logout">
                     Выход
+                  </a>
+                  <a className="nav_user newStyle" href="/api/lkadmin">
+                    {user.name}
                   </a>
                 </>
               ) : (
                 <>
-                  <a className="nav_user" href="/api/lk">
-                    {user.name}
+                  <a className="nav_user newStyle" href="/api/lk">
+                    Личный кабинет
                   </a>
-                  <a className="logout" href="/">
+                  <a className="logout newStyle" href="/">
                     Главная страница
                   </a>
-                  <a className="logout" href="/api/user/logout">
+                  <a className="logout newStyle" href="/api/user/logout">
                     Выход
                   </a>
+                  <a className="newStyle hi">Привет, {user.name}</a>
                 </>
               )
             ) : (
               <>
-                <a className="nav-link" href="/login">
+                <a className="nav-link newStyle" href="/login">
                   Вход
                 </a>
-                <a className="nav-link" href="/registration">
+                <a className="nav-link newStyle" href="/registration">
                   Регистрация
                 </a>
               </>
