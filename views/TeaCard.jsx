@@ -4,13 +4,13 @@ const Layout = require("./Layout");
 
 const TeaCard = ({ user, tea, comment }) => (
   <Layout user={user}>
-    <div className="auction">
+    <div className="auction letter">
       <h1>{tea.teaName}</h1>
       <p>{tea.description}</p>
-      <p>{tea.place}</p>
+      <span>{tea.place}</span>
       <img src={tea.picture}></img>
       {comment.map((el) => (
-        <div className="comment-wrapper">
+        <div className="newcomment-wrapper">
           <p className="username">{el.User.userName}:</p>
           <p className="comment-text">{el.commentBody}</p>
         </div>
