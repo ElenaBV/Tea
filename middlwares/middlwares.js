@@ -1,10 +1,10 @@
 
 
 const checkUser = (req, res, next) => {
-    if (req.session.login) {
+    if (req.session.user) {
       next();
     } else {
-      res.redirect('/log');
+      res.redirect('/login');
     }
   };
 
@@ -19,4 +19,4 @@ const checkUser = (req, res, next) => {
   };
 
 
-  module.exports = {checkAdmin}
+  module.exports = {checkUser, checkAdmin}
