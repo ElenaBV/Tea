@@ -13,8 +13,8 @@ const Layout = require("./Layout");
             <p className='comm'>{elem.commentBody}</p>
             {user.id === elem.ownerId &&
             <>
-            <button data-id={elem.id} className='editBtn'>Изменить</button>
-            <button data-id={elem.id} className='deleteBtn'>Удалить</button>
+            <button data-id={elem.id} className='editBtn btnHover'>Изменить</button>
+            <button data-id={elem.id} className='deleteBtn btnHover'>Удалить</button>
             </>
             }
           

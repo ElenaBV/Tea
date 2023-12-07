@@ -10,15 +10,17 @@ const TeaCard = ({ user, tea, comment }) => (
       <p>{tea.place}</p>
       <img src={tea.picture}></img>
       {comment.map((el) => (
-        <>
-          <p>{el.User.userName}</p>
-          <p>{el.commentBody}</p>
-        </>
+        <div className="comment-wrapper">
+          <p className="username">{el.User.userName}:</p>
+          <p className="comment-text">{el.commentBody}</p>
+        </div>
       ))}
       {user && (
         <form action={`/api/tea/${tea.id}`} method="POST">
-          <input type="text" name="commentBody" />
-          <button type="submit">Add Comment</button>
+          <input type="text" name="commentBody" className="commentInput" />
+          <button className="btnComment btnHover" type="submit">
+            Добавить комментарий
+          </button>
         </form>
       )}
     </div>

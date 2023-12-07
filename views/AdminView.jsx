@@ -13,13 +13,13 @@ const Layout = require("./Layout");
                 <p>{el.place}</p>
                 <img src={el.picture}/>
                 <p>{el.description}</p>
-                <button data-id={el.id} className='deleteBtn'>Удалить</button>
+                <button data-id={el.id} className='deleteBtn btnHover'>Удалить</button>
             </div>
         ))}
     </div>
-<div className='form'>
+<div className='form formAdd'>
     <p className='form-edit'>Форма добавления</p>
-    <button className='add-btn'>Добавить</button>
+    <button className='add-btn btnHover'>Добавить</button>
 </div>
       </div>
       <script src="/teaLkAdmin.js"/>
