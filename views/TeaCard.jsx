@@ -16,7 +16,7 @@ const TeaCard = ({ user, tea, comment }) => (
         </div>
       ))}
       {user && (
-        <form action={`/api/tea/${tea.id}`} method="POST">
+        <form action={`/api/tea/${tea.id}`} method="POST" className="teacomment">
           <input type="text" name="commentBody" className="commentInput" />
           <button className="btnComment btnHover" type="submit">
             Добавить комментарий

@@ -10,41 +10,41 @@ admin?.addEventListener("click", async (event) => {
 <input
  type="text"
  name="teaName"
- placeholder="teaName"
+ placeholder="Название Чая"
  class="teaName"
  defaultValue=""
 />
 <input
  type="text"
  name="place"
- placeholder="Место"
+ placeholder="Место культивации"
  class=""
  defaultValue=""
 />
 <input
  type="text"
  name="latitude"
- placeholder="широта"
+ placeholder="Широта"
  class=""
  defaultValue=""
 />
 <input
  type="text"
  name="longitude"
- placeholder="долгота"
+ placeholder="Долгота"
  class=""
  defaultValue=""
 />
 <input
  name="picture"
- placeholder="picture"
+ placeholder="Картинка"
  class=""
  defaultValue=""
 />
 <input
  type="text"
  name="description"
- placeholder="description"
+ placeholder="Описание"
  class=""
  defaultValue=""
 />

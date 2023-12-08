@@ -9,14 +9,17 @@ function NavBar({ user }) {
             {user ? (
               user.name === "admin" ? (
                 <>
+                <a className="nav_user newStyle" href="/api/lkadmin">
+                    {user.name}
+                  </a>
+                  <a className="nav_user newStyle" href="/api/lk">
+                    Комментарии
+                  </a>
                   <a className="logout newStyle" href="/">
                     Главная страница
                   </a>
                   <a className="logout newStyle" href="/api/user/logout">
                     Выход
-                  </a>
-                  <a className="nav_user newStyle" href="/api/lkadmin">
-                    {user.name}
                   </a>
                 </>
               ) : (
